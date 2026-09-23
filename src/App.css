@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Vazirmatn", sans-serif;
+  color: #f5f5f5;
+  background: #0a0a0a;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  direction: rtl;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+button,
+a {
+  font-family: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   APP
+========================= */
+
+.app {
+  min-height: 100vh;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(255, 255, 255, 0.05),
+      transparent 25%
+    ),
+    #0a0a0a;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: min(1180px, 92%);
+  height: 82px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logo {
+  direction: ltr;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  color: #a7a7a7;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.login-button {
+  padding: 11px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+
+  color: white;
+  background: transparent;
+
+  transition: 0.3s ease;
+}
+
+.login-button:hover {
+  background: white;
+  color: #0a0a0a;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: min(1180px, 92%);
+  min-height: 650px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+}
+
+.hero-content {
+  max-width: 560px;
+}
+
+.hero-badge {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 8px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+
+  color: #bdbdbd;
+  font-size: 12px;
+}
+
+.hero h1 {
+  font-size: clamp(45px, 6vw, 78px);
+  line-height: 1.15;
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #a8e6cf;
+}
+
+.hero-content > p {
+  max-width: 500px;
+  margin-top: 25px;
+
+  color: #969696;
+  font-size: 16px;
+  line-height: 2;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  padding: 14px 25px;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.primary-button {
+  color: #080808;
+  background: #a8e6cf;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(168, 230, 207, 0.15);
+}
+
+.secondary-button {
+  color: white;
+  background: #151515;
+  border: 1px solid #292929;
+}
+
+.secondary-button:hover {
+  background: #202020;
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-glow {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+
+  border-radius: 50%;
+  background: rgba(168, 230, 207, 0.08);
+  filter: blur(70px);
+}
+
+.fashion-card {
+  position: relative;
+  width: 390px;
+  height: 470px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.fashion-card span {
+  color: #8d8d8d;
+  font-size: 11px;
+  letter-spacing: 4px;
+}
+
+.fashion-card h2 {
+  direction: ltr;
+  margin: 25px 0 10px;
+
+  font-size: 52px;
+  letter-spacing: 8px;
+}
+
+.fashion-card p {
+  direction: ltr;
+  color: #777;
+  font-size: 10px;
+  letter-spacing: 4px;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories {
+  width: min(1180px, 92%);
+  margin: 70px auto 130px;
+}
+
+.section-heading {
+  margin-bottom: 45px;
+}
+
+.section-heading > span,
+.section-label {
+  color: #a8e6cf;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.section-heading h2 {
+  margin-top: 10px;
+  font-size: 36px;
+}
+
+.section-heading p {
+  margin-top: 10px;
+  color: #777;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.category-card {
+  padding: 28px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+
+  background: #101010;
+
+  transition: 0.35s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(168, 230, 207, 0.25);
+  background: #141414;
+}
+
+.category-icon {
+  width: 45px;
+  height: 45px;
+  margin-bottom: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+  background: #1c1c1c;
+
+  color: #a8e6cf;
+  font-weight: 700;
+}
+
+.category-card h3 {
+  font-size: 17px;
+}
+
+.category-card p {
+  margin: 10px 0 20px;
+
+  color: #777;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.category-card a {
+  color: #cfcfcf;
+  font-size: 12px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  width: min(1180px, 92%);
+  margin: auto;
+  padding: 80px 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.about h2 {
+  margin-top: 15px;
+  font-size: 38px;
+}
+
+.about p {
+  color: #858585;
+  line-height: 2.2;
+  font-size: 15px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  width: min(1180px, 92%);
+  margin: auto;
+  padding: 35px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  color: #666;
+  font-size: 12px;
+}
+
+footer strong {
+  color: #eee;
+  letter-spacing: 3px;
+}
+
+footer p {
+  margin-top: 6px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    padding: 90px 0;
+  }
+
+  .hero-content {
+    text-align: center;
+    margin: auto;
+  }
+
+  .hero-content > p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .hero-card {
+    margin-top: 30px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .navbar {
+    height: 70px;
+  }
+
+  .login-button {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 70px 0;
+  }
+
+  .hero h1 {
+    font-size: 44px;
+    letter-spacing: -2px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .fashion-card {
+    width: 100%;
+    height: 360px;
+  }
+
+  .fashion-card h2 {
+    font-size: 40px;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .categories {
+    margin-bottom: 80px;
+  }
+
+  .about h2 {
+    font-size: 30px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
